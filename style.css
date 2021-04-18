@@ -1,0 +1,17 @@
+.gray {
+  color: gray;
+  font-family: Lato, sans-serif;
+  padding: 20px;
+}
+
+#mySelect {
+  font-size: 1em;
+  color: gray;
+}
+
+
+
+.map {
+  margin: 20px;
+  padding: 0px;
+}
