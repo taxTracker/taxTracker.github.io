@@ -34,7 +34,7 @@
 	  <div class="row">
 	    <div class="col-md-12">
 	      <p>Select the position to show:
-	      <select class="form-select" id="mySelect" onchange="updateData();" class="gray"></select> </p>	
+	      <select class="form-select" id="mySelect" onchange="updateData();" ></select> </p>	
 	
 		<div class="module">
       		<a class="read-more collapsed" data-toggle="collapse" href="#collapseExample" role="button"></a>
@@ -50,6 +50,17 @@
 	  	<div class="clearfix"></div>
 
 	    <div class="col-md-8">
+	    	<select id="region" class="form-select" onchange="updateMap();" >
+				  <option value="world" selected="true">World</option>
+				  <option value="002">Africa</option>
+				  <option value="150">Europe</option>
+				  <option value="021">Northern America</option>
+				  <option value="005">South America</option>
+				  <option value="013">Central America</option>				  				  
+				  <option value="142">Asia</option>
+			  <option value="009">Oceania</option>
+	    	</select> 
+
 	      <div id="regions_div" class="map"></div>
 	    </div>
 

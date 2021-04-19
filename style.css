@@ -41,6 +41,10 @@ margin-top:-15%;
   color: gray;
 }
 
+#region {
+  font-size: 0.7em;
+  color: gray;
+}
 #description {
   font-size: 0.8em;
 }

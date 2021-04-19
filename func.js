@@ -10,8 +10,36 @@ google.charts.load('current', {
 google.charts.setOnLoadCallback(getData);
 
 
+function updateMap() {
+  var selectBox = document.getElementById("region");
+  var selectedRegion = selectBox.options[selectBox.selectedIndex].value;
+  var options = {
+    colorAxis: {
+      values: [0, 1],
+      colors: ['#ff6347', '#6495ED']
+    },
+    width: '100%',
+    backgroundColor: '#fffdf4',
+    defaultColor: '#e5e5e5',
+    datalessRegionColor: '#e5e5e5',
+    legend: 'none',
+    enableRegionInteractivity: true,
+    projection: {
+      name:  'kavrayskiy-vii',
+    },
+    region: selectedRegion
+  }
+  console.log(selectedRegion)
+  chart.draw(data_map, options);
+
+
+}
+
 
 function updateData() {
+  var selectBox = document.getElementById("region");
+  var selectedRegion = selectBox.options[selectBox.selectedIndex].value;
+
   var selectBox = document.getElementById("mySelect");
   var selectedValue = selectBox.options[selectBox.selectedIndex].value;
 
@@ -117,7 +145,7 @@ function drawChart(response) {
     return;
   }
 
-  var data = response.getDataTable();
+  data_map = response.getDataTable();
 
   //console.log(data);
 
@@ -140,7 +168,7 @@ function drawChart(response) {
 
   chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
-  chart.draw(data, options);
+  chart.draw(data_map, options);
   google.visualization.events.addListener(chart, 'select', function() {
     table.setSelection(chart.getSelection());
   });
@@ -181,7 +209,7 @@ function drawTable(response) {
 
 
 $(window).resize(function(){
-  updateData();
+  updateMap();
 });
 
 
