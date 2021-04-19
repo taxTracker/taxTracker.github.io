@@ -156,9 +156,10 @@ function drawChart(response) {
     },
     width: '100%',
     backgroundColor: '#fffdf4',
-    defaultColor: '#e5e5e5',
+    defaultColor: '#f9f9f9',
     datalessRegionColor: '#e5e5e5',
     legend: 'none',
+    region: "150",
     enableRegionInteractivity: true,
     projection: {
       name:  'kavrayskiy-vii',
