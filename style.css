@@ -1,17 +1,91 @@
+
+body {
+	background-color: #fffdf4;
+	margin: 20px;
+	font-family: Lato, sans-serif;
+}
+
+
+p {
+	color: gray;
+}
+
+
+.chart {
+  width: 100%; 
+  min-height: 450px;
+}
+.row {
+  margin:0 !important;
+}
+/*
+#regions_div {
+width:110%;
+overflow:hidden;
+
+}
+#regions_div svg {
+margin-left:-5%;
+margin-top:-15%;
+}
+
+*/
 .gray {
   color: gray;
-  font-family: Lato, sans-serif;
+  
   padding: 20px;
 }
 
 #mySelect {
-  font-size: 1em;
+  font-size: 0.9em;
   color: gray;
+}
+
+#description {
+  font-size: 0.8em;
 }
 
 
 
 .map {
-  margin: 20px;
+  margin: 10px;
   padding: 0px;
 }
+
+  .module {
+    position: relative;
+  }
+
+  .module .collapse, .module .collapsing {
+    height: 4rem;
+  }
+
+  .module .collapse {
+    display: block;
+    overflow: hidden;
+  }
+
+  .module .collapse.show {
+    height: auto;
+  }
+
+
+  .read-more {
+    opacity: 1;
+    transition: all .3s linear;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    background-image: linear-gradient(to bottom, transparent 10%, #fffdf4);
+  }
+
+  .read-more:not(.collapsed) {
+    opacity: 0;
+
+  }
+
+  
