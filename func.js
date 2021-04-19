@@ -132,7 +132,9 @@ function drawChart(response) {
     datalessRegionColor: '#e5e5e5',
     legend: 'none',
     enableRegionInteractivity: true,
-
+    projection: {
+      name:  'kavrayskiy-vii',
+    }
 
   };
 
